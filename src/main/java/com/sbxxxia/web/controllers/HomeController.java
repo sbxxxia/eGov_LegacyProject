@@ -1,4 +1,4 @@
-package com.sbxxxia.web;
+package com.sbxxxia.web.controllers;
 
 import java.util.Locale;
 
@@ -17,7 +17,7 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("------------------홈 진입-----------------");
 		
-		return "Home.jsp";
+		return "main/Home.tiles";
 	}
 	
 }

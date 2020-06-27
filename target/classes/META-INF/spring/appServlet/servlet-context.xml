@@ -35,11 +35,6 @@
                 </bean>
             </list>
         </property>
-        <property name="defaultViews">
-            <list>
-                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>
-            </list>
-        </property>
     </bean>
 	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManager">
            <constructor-arg>

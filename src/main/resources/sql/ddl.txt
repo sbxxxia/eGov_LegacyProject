@@ -1,0 +1,16 @@
+DROP TABLE if EXISTS facilities;
+
+CREATE TABLE facilities(
+	facility_seq VARCHAR(10) PRIMARY KEY,
+	f_name VARCHAR(50),
+	f_type VARCHAR(20),
+	f_region VARCHAR(10),
+	f_postal_code VARCHAR(10),
+	f_address VARCHAR(100),
+	f_detailed_address VARCHAR(50),
+	f_phone_number VARCHAR(50)
+)ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+SHOW TABLES;
+
+SELECT * FROM facilities;
