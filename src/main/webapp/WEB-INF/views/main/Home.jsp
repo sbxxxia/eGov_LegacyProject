@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<main class="v-main" style="padding: 64px 0px 0px;"
-				data-booted="true">
+<main class="v-main" style="padding: 64px 0px 0px;" data-booted="true">
 <div class="v-main__wrap">
 	<div data-v-4c22b934="">
 		<div data-v-4c22b934="" class="container">

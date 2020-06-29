@@ -5,7 +5,7 @@
 		<div data-v-4c22b934="">
 			<div data-v-ef68022e="" data-v-4c22b934="" class="container">
 				<div data-v-ef68022e="" class="v-card v-sheet theme--light"
-					style="max-width: 40%;">
+					style="position: relative; width:30%; margin-left:auto; margin-right:auto; margin-top:100px;">
 					<div data-v-ef68022e="" 
 						class="v-card__title headline grey lighten-2">Login</div>
 					<form data-v-ef68022e="" novalidate="novalidate" class="v-form">

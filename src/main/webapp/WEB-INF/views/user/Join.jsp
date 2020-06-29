@@ -4,15 +4,13 @@
 	<div class="v-main__wrap">
 		<div data-v-4c22b934="">
 			<div data-v-faec374c="" data-v-4c22b934="" class="container">
-				<form data-v-faec374c="" novalidate="novalidate" class="v-form">
+				<form data-v-faec374c="" novalidate="novalidate" class="v-form" style="position: relative; width:50%; margin-left:auto; margin-right:auto; margin-top:100px;">
 					<div data-v-faec374c=""
-						class="v-input mt-16 mx-16 theme--light v-text-field v-text-field--is-booted">
+						 class="v-input mt-16 mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<label for="input-91" class="v-label theme--light"
-										style="left: 0px; right: auto; position: absolute;">Name</label><input
-										required="required" id="input-91" type="text">
+									<input required="required" id="input-91" type="text" placeholder="Name">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -23,13 +21,11 @@
 						</div>
 					</div>
 					<div data-v-faec374c=""
-						class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
+						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<label for="input-94" class="v-label theme--light"
-										style="left: 0px; right: auto; position: absolute;">ID</label><input
-										required="required" id="input-94" type="text">
+									<input required="required" id="input-94" type="text" placeholder="ID">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -41,13 +37,11 @@
 						</div>
 					</div>
 					<div data-v-faec374c=""
-						class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
+						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<label for="input-97" class="v-label theme--light"
-										style="left: 0px; right: auto; position: absolute;">PW</label><input
-										required="required" id="input-97" type="text">
+									<input required="required" id="input-97" type="text" placeholder="PW">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -58,13 +52,11 @@
 						</div>
 					</div>
 					<div data-v-faec374c=""
-						class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
+						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<label for="input-100" class="v-label theme--light"
-										style="left: 0px; right: auto; position: absolute;">Email</label><input
-										required="required" id="input-100" type="text">
+									<input required="required" id="input-100" type="text" placeholder="Email">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -79,9 +71,7 @@
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<label for="input-103" class="v-label theme--light"
-										style="left: 0px; right: auto; position: absolute;">Phone
-										Number</label><input required="required" id="input-103" type="text">
+									<input required="required" id="input-103" type="text" placeholder="Phone Number">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -92,7 +82,8 @@
 						</div>
 					</div>
 					<hr data-v-faec374c="" role="separator"
-						aria-orientation="horizontal" class="v-divider theme--light">
+						aria-orientation="horizontal" 
+						class="v-divider theme--light">
 					<div data-v-faec374c="" class="v-card__actions">
 						<a data-v-faec374c="" href="/"
 							class="v-btn v-btn--contained v-btn--router theme--light v-size--default"><span

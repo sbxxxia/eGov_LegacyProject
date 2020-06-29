@@ -11,26 +11,11 @@
 		<div class="v-application--wrap">
 			<tiles:insertAttribute name="navigator" />
 
-			<tiles:insertAttribute name="content" />
+			<tiles:insertAttribute name="noTemplate" />
 
 		</div>
 	</div>
 </body>
 <script>
-	new Vue({
-		el : '#app',
-		vuetify : new Vuetify(),
-	})
-</script>
-<script>
-	$('#join_btn').click(function(e){
-		e.preventDefault()
-		location.href = `${context}/account/join/form`
-	})
-	$('#login_btn').click(function(e){
-		e.preventDefault()
-		location.href = "${context}/account/login/form"
-	})
-	
 </script>
 </html>
