@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>404</title>
 </head>
 <body>
 	<h1>에러 404</h1>

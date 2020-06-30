@@ -5,7 +5,7 @@
 		<div data-v-4c22b934="">
 			<div data-v-faec374c="" data-v-4c22b934="" class="container">
 				<form data-v-faec374c="" novalidate="novalidate" class="v-form" style="position: relative; width:50%; margin-left:auto; margin-right:auto; margin-top:100px;">
-					<div data-v-faec374c=""
+					<!-- <div data-v-faec374c=""
 						 class="v-input mt-16 mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
@@ -19,13 +19,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div data-v-faec374c=""
 						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input required="required" id="input-94" type="text" placeholder="ID">
+									<input id="userid" required="required" id="input-94" type="text" placeholder="ID">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -41,7 +41,7 @@
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input required="required" id="input-97" type="text" placeholder="PW">
+									<input id="password" required="required" id="input-97" type="text" placeholder="PW">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 					</div>
-					<div data-v-faec374c=""
+					<!-- <div data-v-faec374c=""
 						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
@@ -80,7 +80,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<hr data-v-faec374c="" role="separator"
 						aria-orientation="horizontal" 
 						class="v-divider theme--light">
@@ -89,7 +89,7 @@
 							class="v-btn v-btn--contained v-btn--router theme--light v-size--default"><span
 							class="v-btn__content"> 취소 </span></a>
 						<div data-v-faec374c="" class="spacer"></div>
-						<button data-v-faec374c="" type="button"
+						<button data-v-faec374c="" type="button" id = "signup_btn"
 							class="v-btn v-btn--contained theme--light v-size--default">
 							<span class="v-btn__content"> 회원가입 </span>
 						</button>
@@ -103,6 +103,12 @@
 		</div>
 	</div>
 </main>
-<!-- built files will be auto injected -->
-<script type="text/javascript" src="/js/chunk-vendors.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+<script src="${javascript}/store/user.js"></script>
+<script>
+document.getElementById('signup_btn').addEventListener('click',function(e){
+	e.preventDefault()
+	user.init()
+	user.join({"userid": document.getElementById('userid').value,
+			   "password": document.getElementById('password').value})
+})
+</script>

@@ -14,7 +14,18 @@
 	</definition>
 	
 	<!-- 노타일즈 -->
-	<definition name="noTiles" template="/WEB-INF/views/layouts/noTemplate.jsp">
+	<!-- <definition name="noTiles" template="/WEB-INF/views/layouts/NoTemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/common/Header.jsp"/>
+		<put-attribute name="navigator" value="/WEB-INF/views/common/Navigator.jsp"/>
+		<put-attribute name="noTemplate" value=""/>
+	</definition>
+	<definition name="*/*.jsp" extends="noTiles">
+		<put-attribute name="noTemplate" value="/WEB-INF/views/{1}/{2}.jsp"/>
+	</definition> -->
+	
+	
+	
+	<definition name="noTiles" template="/WEB-INF/views/layouts/NoTemplate.jsp">
 		<put-attribute name="noTemplate" value=""/>
 	</definition>
 	<definition name="*/*.jsp" extends="noTiles">

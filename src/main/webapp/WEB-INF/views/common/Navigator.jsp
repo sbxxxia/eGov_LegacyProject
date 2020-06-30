@@ -64,5 +64,13 @@
 	</div>
 </header>
 <script>
-
+	$('#join_btn').click(function(e){
+		e.preventDefault()
+		location.href = `${context}/location/user/Join`
+	})
+	$('#login_btn').click(function(e){
+		e.preventDefault()
+		location.href = `${context}/location/user/Login`
+	})
+	
 </script>

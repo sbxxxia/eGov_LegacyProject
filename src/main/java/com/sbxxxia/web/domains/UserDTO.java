@@ -7,5 +7,5 @@ import lombok.Data;
 @Data
 @Component
 public class UserDTO {
-	private String userid, passwd, userName, email, addr, phoneNumber;
+	private String userid, password;
 }

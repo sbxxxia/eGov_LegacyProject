@@ -15,8 +15,8 @@
 								<div class="v-input__slot">
 									<div class="v-text-field__slot">
 										<label for="input-94" class="v-label theme--light"
-											style="left: 0px; right: auto; position: absolute;">ID</label><input
-											required="required" id="input-94" type="text">
+											style="left: 0px; right: auto; position: absolute;"></label><input
+											required="required" id="input-94" type="text" placeholder="ID">
 									</div>
 								</div>
 								<div class="v-text-field__details">
@@ -32,8 +32,8 @@
 								<div class="v-input__slot">
 									<div class="v-text-field__slot">
 										<label for="input-97" class="v-label theme--light"
-											style="left: 0px; right: auto; position: absolute;">PW</label><input
-											required="required" id="input-97" type="text">
+											style="left: 0px; right: auto; position: absolute;"></label><input
+											required="required" id="input-97" type="text" placeholder="PW">
 									</div>
 								</div>
 								<div class="v-text-field__details">
@@ -66,8 +66,7 @@
 	</div>
 </main>
 <!-- built files will be auto injected -->
-<script type="text/javascript" src="/js/chunk-vendors.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+<script src="${js}/store/user.js"></script>
 
 </body>
 </html>

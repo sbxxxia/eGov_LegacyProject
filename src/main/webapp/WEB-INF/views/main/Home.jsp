@@ -785,5 +785,6 @@
 </div>
 </main>
 
-<script type="text/javascript" src="/js/chunk-vendors.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+<script>
+app.init("${context}")
+</script>
