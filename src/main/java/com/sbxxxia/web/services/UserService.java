@@ -1,5 +1,7 @@
 package com.sbxxxia.web.services;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,11 +12,12 @@ public interface UserService {
 	public void findAll();
 	public void count();
 	public void delete();
-	public void findByEmailAndUserId(String email, String userid);
-	public void findByEmailOrUserId();
-	public void findByCreatedAtBetween();
-	public void findByAgeGraterThanEqual();
-	public void findByNameLike();
-	public void findByJobIsNull();
-	public void findByEmailAndUserId();
+	public void findByEmailAndUserid(String email, String userid);
+	public void findByEmailOrUserid(String email, String userid);
+	public void findByCreatedAtBetween(Date fromDate, Date toDate);
+	public void findByAgeGraterThanEqual(int age);
+	public void findByNameLike(String name);
+	public void findByAccessCodeIsNull();
+	public void findByGenderLike(String gender);
+	public void findByEmailOrderByNameAsc(String email);
 }

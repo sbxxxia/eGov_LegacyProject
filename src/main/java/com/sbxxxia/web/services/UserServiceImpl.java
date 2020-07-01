@@ -1,5 +1,7 @@
 package com.sbxxxia.web.services;
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,119 +15,86 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired UserMapper userMapper;
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#save()
-	 */
 	@Override
 	public void save() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#update()
-	 */
 	@Override
 	public void update() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findOne()
-	 */
 	@Override
 	public void findOne() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findAll()
-	 */
 	@Override
 	public void findAll() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#count()
-	 */
 	@Override
 	public void count() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#delete()
-	 */
 	@Override
 	public void delete() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByEmailAndUserId(java.lang.String, java.lang.String)
-	 */
 	@Override
-	public void findByEmailAndUserId(String email, String userid) {
+	public void findByEmailAndUserid(String email, String userid) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByEmailOrUserId()
-	 */
 	@Override
-	public void findByEmailOrUserId() {
+	public void findByEmailOrUserid(String email, String userid) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByCreatedAtBetween()
-	 */
 	@Override
-	public void findByCreatedAtBetween() {
+	public void findByCreatedAtBetween(Date fromDate, Date toDate) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByAgeGraterThanEqual()
-	 */
 	@Override
-	public void findByAgeGraterThanEqual() {
+	public void findByAgeGraterThanEqual(int age) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByNameLike()
-	 */
 	@Override
-	public void findByNameLike() {
+	public void findByNameLike(String name) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByJobIsNull()
-	 */
 	@Override
-	public void findByJobIsNull() {
+	public void findByAccessCodeIsNull() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.sbxxxia.web.services.UserService#findByEmailAndUserId()
-	 */
 	@Override
-	public void findByEmailAndUserId() {
+	public void findByGenderLike(String gender) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void findByEmailOrderByNameAsc(String email) {
 		// TODO Auto-generated method stub
 		
 	}

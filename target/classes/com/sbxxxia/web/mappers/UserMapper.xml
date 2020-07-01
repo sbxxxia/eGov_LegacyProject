@@ -1,8 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sbxxxia.web.mappers.UserMapper">
 	<select id="truncateUser" parameterType="hashMap">
-		${}
+		${TRUNCATE_USERS}
+	</select>
+	<select id="createDB" parameterType="hashMap">
+		${CREATE_DB}
 	</select>
 </mapper>

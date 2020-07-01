@@ -25,7 +25,7 @@
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input id="userid" required="required" id="input-94" type="text" placeholder="ID">
+									<input id="userid" name="userid" required="required" type="text" placeholder="ID">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -41,7 +41,7 @@
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input id="password" required="required" id="input-97" type="text" placeholder="PW">
+									<input id="password" name="password" required="required" type="text" placeholder="PW">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -89,7 +89,7 @@
 							class="v-btn v-btn--contained v-btn--router theme--light v-size--default"><span
 							class="v-btn__content"> 취소 </span></a>
 						<div data-v-faec374c="" class="spacer"></div>
-						<button data-v-faec374c="" type="button" id = "signup_btn"
+						<button data-v-faec374c="" type="button" id="signup_btn"
 							class="v-btn v-btn--contained theme--light v-size--default">
 							<span class="v-btn__content"> 회원가입 </span>
 						</button>

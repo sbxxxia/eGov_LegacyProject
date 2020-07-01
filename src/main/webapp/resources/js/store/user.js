@@ -2,7 +2,7 @@ var user = user || {}
 user = (function(){
 	let _, javascript, session
 	let init = function(){
-		_ = sessionStorage.getItem('context')
+		_ = sessionStorage.getItem('context'),
 		javascript = sessionStorage.getItem('javascript'),
 		session = sessionStorage.getItem('session')
 	}
@@ -10,14 +10,18 @@ user = (function(){
 		$.ajax({
 			url: _+`/account/users`,
 			type: 'POST',
-			data: $("joinForm").serialize(),
+			data: JSON.stringify(payload),
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				location.href = _+`/location/user/Login`
+				if(res === 'SUCCESS'){
+					location.href = _+`/location/user/Login`
+				} else {
+					location.href = _+`/location/user/Join`
+				}
 			},
 			error: function(err){
-				location.href = _+`/location/user/Join`
+				
 			}
 		})
 	}
@@ -29,10 +33,10 @@ user = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				location.href = _+`/location/user/Login`
+				alert(res)
 			},
 			error: function(err){
-				location.href = _+`/location/user/Login`
+				alert(err)
 			}
 		})
 	}
@@ -42,6 +46,18 @@ user = (function(){
 		sessionStorage.removeItem('javascript')
 		sessionStorage.removeItem('css')
 		sessionStorage.removeItem('image')
+		location.href = _+`/`
 	}
+	let remove = function(){
+		$.ajax()
+		sessionStorage.removeItem('userid')
+		sessionStorage.removeItem('context')
+		sessionStorage.removeItem('javascript')
+		sessionStorage.removeItem('css')
+		sessionStorage.removeItem('image')
+		location.href = _+`/`
+		
+	}
+	return {init, join, login, logout, remove}
 })()
 
