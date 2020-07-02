@@ -7,13 +7,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sbxxxia.web.domains.UserDTO;
 import com.sbxxxia.web.mappers.UserMapper;
 
 @Service
 public class UserServiceImpl implements UserService {
+	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
-	
 	@Autowired UserMapper userMapper;
+	@Autowired UserDTO user;
 
 	@Override
 	public void save() {
@@ -52,8 +54,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void findByEmailAndUserid(String email, String userid) {
-		// TODO Auto-generated method stub
+	public UserDTO findByUseridAndPassword(UserDTO param) {
+		return userMapper.selectUseridByIdPassword(param);
 		
 	}
 
@@ -97,6 +99,11 @@ public class UserServiceImpl implements UserService {
 	public void findByEmailOrderByNameAsc(String email) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void register(UserDTO param) {
+		userMapper.insertUser(param);
 	}
 
 }

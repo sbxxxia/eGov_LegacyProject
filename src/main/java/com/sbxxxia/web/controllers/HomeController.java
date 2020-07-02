@@ -20,8 +20,8 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String home(HttpSession session, HttpServletRequest request) {
-		 session.setAttribute("context",   request.getContextPath());
-		 session.setAttribute("javascript",    request.getContextPath()+"/resources/js");
+		 session.setAttribute("context", request.getContextPath());
+		 session.setAttribute("javascript", request.getContextPath()+"/resources/js");
 		 
 		logger.info("------------------홈 진입-----------------");
 		

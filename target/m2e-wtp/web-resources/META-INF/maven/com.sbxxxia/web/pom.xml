@@ -24,6 +24,7 @@
 		<jaxb-impl-version>2.1</jaxb-impl-version>
 		<jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
 		<json-lib-version>2.4</json-lib-version>
+		<jstl-version>1.2</jstl-version>
 		<jsoup-version>1.11.2</jsoup-version>
 		<dbcp-version>1.4</dbcp-version>
 		<spring-jdbc-version>2.0.6</spring-jdbc-version>
@@ -119,12 +120,12 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${jstl-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-el</groupId>
 			<artifactId>commons-el</artifactId>
-			<version>1.0</version>
+			<version>${commons-el-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
@@ -214,6 +215,11 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
 		<!-- Root -->
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
@@ -251,7 +257,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-version}</version>
 		</dependency>
-
+		<dependency>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
 
 	</dependencies>
 	<build>

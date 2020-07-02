@@ -3,10 +3,39 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sbxxxia.web.mappers.UserMapper">
+	<select id="createDB" parameterType="hashMap">
+		${CREATE_DB}
+	</select>
+	
+	<select id="createUsers" parameterType="hashMap">
+		${CREATE_USERS}
+	</select>
+	
+	<select id="insertUser" 
+			parameterType="com.sbxxxia.web.domains.UserDTO">
+		<!-- ${INSERT_USER} -->
+		insert into users(userid, password, name, birthday, gender, telephone, reg_date, access_code)
+		values (#{userid}, #{password}, #{name}, #{birthday}, #{gender}, #{telephone}, #{regDate}, #{accessCode})
+	</select>
+	
+	<select id="dropUser" parameterType="hashMap">
+		${DROP_USER}
+	</select>
+	
 	<select id="truncateUser" parameterType="hashMap">
 		${TRUNCATE_USERS}
 	</select>
-	<select id="createDB" parameterType="hashMap">
-		${CREATE_DB}
+	
+	<select id="selectUseridByIdPassword" 
+			parameterType="com.sbxxxia.web.domains.UserDTO" 
+			resultType="com.sbxxxia.web.domains.UserDTO">
+		SELECT access_code
+		FROM users
+		WHERE userid = #{userid} AND password = #{password}
+	</select>
+	
+	<select id="countUsers" resultType="int">
+		SELECT COUNT(*)
+		FROM users
 	</select>
 </mapper>

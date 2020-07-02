@@ -15,7 +15,8 @@ public class FileUploader extends Proxy{
     public void upload(){
     	inventory.clear();
         try{
-            BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\bit\\IdeaProjects\\lambda\\src\\main\\resources\\static\\files\\player.csv")));
+            @SuppressWarnings("resource")
+			BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\bit\\IdeaProjects\\lambda\\src\\main\\resources\\static\\files\\player.csv")));
             String player = "";
             while((player = reader.readLine()) != null){
                 inventory.add(player);

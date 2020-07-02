@@ -1,37 +1,37 @@
 package com.sbxxxia.web.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.sbxxxia.web.domains.UserDTO;
-import com.sbxxxia.web.enums.Messenger;
+import com.sbxxxia.web.services.UserService;
 
 @RestController
 @RequestMapping("/account")
+@SessionAttributes({"session"})
 public class UserController {
+	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-	
-	@GetMapping("/login/form")
-	public String loginForm() {
-		logger.info("----------------로그인 화면 진입 ---------------");
-		return "user/Login.tiles";
-	}
+	@Autowired UserService userService;
 	
 	@PostMapping("/users")
-	public Messenger join(@RequestBody UserDTO userDTO) {
-		System.out.println("넘어온 회원정보"+userDTO.toString());
-		return Messenger.SUCCESS;
+	public boolean join(@RequestBody UserDTO user) {
+		userService.register(user);
+		return true;
 	}
 	
-	@PostMapping("/users/{userid}")
-	public Messenger login(@PathVariable String userid) {
-		System.out.println("--------------로그인 시도-------------");
-		return Messenger.SUCCESS;
+	@PostMapping("/login")
+	public UserDTO login(HttpSession session, @RequestBody UserDTO user) {
+		UserDTO returnUser = userService.findByUseridAndPassword(user);
+		session.setAttribute("session", returnUser);
+		return returnUser;
 	}
 }

@@ -14,7 +14,7 @@ user = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				if(res === 'SUCCESS'){
+				if(res){
 					location.href = _+`/location/user/Login`
 				} else {
 					location.href = _+`/location/user/Join`
@@ -27,13 +27,13 @@ user = (function(){
 	}
 	let login = function(payload){
 		$.ajax({
-			url : _+`/account/users/${payload.userid}`,
+			url : _+`/account/login`,
 			type: 'POST',
 			data: JSON.stringify(payload),
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				alert(res)
+				location.href = _ +`/`
 			},
 			error: function(err){
 				alert(err)

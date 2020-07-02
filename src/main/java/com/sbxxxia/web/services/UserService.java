@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
+import com.sbxxxia.web.domains.UserDTO;
+
 @Component
 public interface UserService {
 	public void save();
@@ -12,7 +14,7 @@ public interface UserService {
 	public void findAll();
 	public void count();
 	public void delete();
-	public void findByEmailAndUserid(String email, String userid);
+	public UserDTO findByUseridAndPassword(UserDTO user); //로그인
 	public void findByEmailOrUserid(String email, String userid);
 	public void findByCreatedAtBetween(Date fromDate, Date toDate);
 	public void findByAgeGraterThanEqual(int age);
@@ -20,4 +22,5 @@ public interface UserService {
 	public void findByAccessCodeIsNull();
 	public void findByGenderLike(String gender);
 	public void findByEmailOrderByNameAsc(String email);
+	public void register(UserDTO user);
 }

@@ -5,34 +5,18 @@
 		<div data-v-4c22b934="">
 			<div data-v-faec374c="" data-v-4c22b934="" class="container">
 				<form data-v-faec374c="" novalidate="novalidate" class="v-form" style="position: relative; width:50%; margin-left:auto; margin-right:auto; margin-top:100px;">
-					<!-- <div data-v-faec374c=""
+					<div data-v-faec374c=""
 						 class="v-input mt-16 mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input required="required" id="input-91" type="text" placeholder="Name">
+									<input required="required" id="userid" type="text" placeholder="ID">
 								</div>
 							</div>
 							<div class="v-text-field__details">
 								<div class="v-messages theme--light">
 									<div class="v-messages__wrapper"></div>
 								</div>
-							</div>
-						</div>
-					</div> -->
-					<div data-v-faec374c=""
-						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
-						<div class="v-input__control">
-							<div class="v-input__slot">
-								<div class="v-text-field__slot">
-									<input id="userid" name="userid" required="required" type="text" placeholder="ID">
-								</div>
-							</div>
-							<div class="v-text-field__details">
-								<div class="v-messages theme--light">
-									<div class="v-messages__wrapper"></div>
-								</div>
-								<div class="v-counter theme--light">0 / 10</div>
 							</div>
 						</div>
 					</div>
@@ -48,15 +32,31 @@
 								<div class="v-messages theme--light">
 									<div class="v-messages__wrapper"></div>
 								</div>
+								<div class="v-counter theme--light">0 / 10</div>
 							</div>
 						</div>
 					</div>
-					<!-- <div data-v-faec374c=""
+					<div data-v-faec374c=""
 						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input required="required" id="input-100" type="text" placeholder="Email">
+									<input id="name" name="name" required="required" type="text" placeholder="NAME">
+								</div>
+							</div>
+							<div class="v-text-field__details">
+								<div class="v-messages theme--light">
+									<div class="v-messages__wrapper"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-faec374c=""
+						 class="v-input mx-16 theme--light v-text-field v-text-field--is-booted">
+						<div class="v-input__control">
+							<div class="v-input__slot">
+								<div class="v-text-field__slot">
+									<input required="required" id="birthday" type="text" placeholder="BIRTHDAY">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -71,7 +71,7 @@
 						<div class="v-input__control">
 							<div class="v-input__slot">
 								<div class="v-text-field__slot">
-									<input required="required" id="input-103" type="text" placeholder="Phone Number">
+									<input required="required" id="gender" type="text" placeholder="GENDER">
 								</div>
 							</div>
 							<div class="v-text-field__details">
@@ -80,7 +80,52 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
+					<div data-v-faec374c=""
+						class="v-input mb-16 mx-16 theme--light v-text-field v-text-field--is-booted">
+						<div class="v-input__control">
+							<div class="v-input__slot">
+								<div class="v-text-field__slot">
+									<input required="required" id="telephone" type="text" placeholder="telephone">
+								</div>
+							</div>
+							<div class="v-text-field__details">
+								<div class="v-messages theme--light">
+									<div class="v-messages__wrapper"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-faec374c=""
+						class="v-input mb-16 mx-16 theme--light v-text-field v-text-field--is-booted">
+						<div class="v-input__control">
+							<div class="v-input__slot">
+								<div class="v-text-field__slot">
+									<input required="required" id="regDate" type="text" placeholder="regDate">
+								</div>
+							</div>
+							<div class="v-text-field__details">
+								<div class="v-messages theme--light">
+									<div class="v-messages__wrapper"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-faec374c=""
+						class="v-input mb-16 mx-16 theme--light v-text-field v-text-field--is-booted">
+						<div class="v-input__control">
+							<div class="v-input__slot">
+								<div class="v-text-field__slot">
+									<input required="required" id="accessCode" type="text" placeholder="accessCode">
+								</div>
+							</div>
+							<div class="v-text-field__details">
+								<div class="v-messages theme--light">
+									<div class="v-messages__wrapper"></div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<hr data-v-faec374c="" role="separator"
 						aria-orientation="horizontal" 
 						class="v-divider theme--light">
@@ -109,6 +154,12 @@ document.getElementById('signup_btn').addEventListener('click',function(e){
 	e.preventDefault()
 	user.init()
 	user.join({"userid": document.getElementById('userid').value,
-			   "password": document.getElementById('password').value})
+			   "password": document.getElementById('password').value,
+			   "name": document.getElementById('name').value,
+			   "birthday": document.getElementById('birthday').value,
+			   "gender": document.getElementById('gender').value,
+			   "telephone": document.getElementById('telephone').value,
+			   "regDate": document.getElementById('regDate').value,
+			   "accessCode": document.getElementById('accessCode').value})
 })
 </script>

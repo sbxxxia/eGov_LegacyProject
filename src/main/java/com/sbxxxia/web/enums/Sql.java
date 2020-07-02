@@ -3,6 +3,7 @@ package com.sbxxxia.web.enums;
 public enum Sql {
 	CREATE_DB,
 	CREATE_USERS, DROP_USERS, TRUNCATE_USERS,
+	INSERT_USER, DROP_USER,
 	CREATE_ARTICLES, DROP_ARTICLES, TRUNCATE_ARTICLES,
 	CREATE_FILES, DROP_FILES, TRUNCATE_FILES;
 	
@@ -20,8 +21,9 @@ public enum Sql {
 					+ " name varchar(30) ,"
 					+ " birthday varchar(30) ,"
 					+ " gender varchar(10) ,"
-					+ " regDate varchar(10) ,"
-					+ " telephone varchar(30)) ENGINE=InnoDB DEFAULT CHARSET=UTF8";
+					+ " reg_date varchar(10) ,"
+					+ " telephone varchar(30),"
+					+ " access_code VARCHAR(30)) ENGINE=InnoDB DEFAULT CHARSET=UTF8";
 			break;
 			
 		case DROP_USERS:
@@ -32,6 +34,14 @@ public enum Sql {
 			result = "truncate table users";
 			break;
 			
+		case INSERT_USER:
+			result = "insert userid, password, name, birthday, gender, telephone, reg_date, access_code "
+					+ "into users "
+					+ "values (#{userid}, #{password}, #{name}, #{birthday}, #{gender}, #{telephone}, #{regDate}, #{accessCode})";
+			
+		case DROP_USER:
+			result = "delete from users where userid like #{userid}";
+		
 		case CREATE_ARTICLES:
 			result = "create table articles("
 					+ "article_number int auto_increment primary key,"

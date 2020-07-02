@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header
 	class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--fixed transparent"
 	style="height: 64px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
@@ -41,34 +43,85 @@
 			</div>
 		</div>
 		<div class="spacer"></div>
-		<a id="join_btn" class="">
-			<button type="button"
-					class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-					flat="">
-				<span class="v-btn__content"><span class="black--text">
-					Join
-				</span><i aria-hidden="true"
-						  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
-			</button>
-		</a> 
-		<a id="login_btn" class="">
-			<button type="button"
-					class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-					flat="">
-				<span class="v-btn__content"><span class="black--text">
-					Login
-				</span><i aria-hidden="true"
-						  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
-			</button>
-		</a>
+		
+		<c:choose>
+			<c:when test="${empty session}">
+				<a id="navi_join_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							회원가입
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>
+				<a id="navi_login_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							로그인
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>
+			</c:when>
+			
+			<c:when test="${session.accessCode eq 'admin'}">
+				<a id="navi_connecting_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							접속중
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>
+				<a id="navi_disconnection_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							접속해제
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>
+			</c:when>
+			
+			<c:otherwise>
+				<a id="navi_logout_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							로그아웃
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>
+				<a id="navi_withdrawal_btn" class="">
+					<button type="button"
+							class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+							flat="">
+						<span class="v-btn__content"><span class="black--text">
+							회원탈퇴
+						</span><i aria-hidden="true"
+								  class="v-icon notranslate mdi mdi-open-in-new theme--light"></i></span>
+					</button>
+				</a>	
+			</c:otherwise>
+		</c:choose>
 	</div>
 </header>
 <script>
-	$('#join_btn').click(function(e){
+	$('#navi_join_btn').click(function(e){
 		e.preventDefault()
 		location.href = `${context}/location/user/Join`
 	})
-	$('#login_btn').click(function(e){
+	$('#navi_login_btn').click(function(e){
 		e.preventDefault()
 		location.href = `${context}/location/user/Login`
 	})
