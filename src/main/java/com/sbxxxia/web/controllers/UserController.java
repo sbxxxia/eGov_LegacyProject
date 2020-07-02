@@ -18,7 +18,6 @@ import com.sbxxxia.web.services.UserService;
 @RequestMapping("/account")
 @SessionAttributes({"session"})
 public class UserController {
-	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	@Autowired UserService userService;
 	
@@ -30,8 +29,10 @@ public class UserController {
 	
 	@PostMapping("/login")
 	public UserDTO login(HttpSession session, @RequestBody UserDTO user) {
+		logger.info("*****************************");
 		UserDTO returnUser = userService.findByUseridAndPassword(user);
 		session.setAttribute("session", returnUser);
+		logger.info("로그인시도: "+returnUser.toString());
 		return returnUser;
 	}
 }

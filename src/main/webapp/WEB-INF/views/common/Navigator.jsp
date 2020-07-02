@@ -116,14 +116,36 @@
 		</c:choose>
 	</div>
 </header>
+<script src="${javascript}/store/user.js"></script>
 <script>
 	$('#navi_join_btn').click(function(e){
 		e.preventDefault()
+		alert('회원가입')
 		location.href = `${context}/location/user/Join`
 	})
 	$('#navi_login_btn').click(function(e){
 		e.preventDefault()
+		alert('로그인')
 		location.href = `${context}/location/user/Login`
 	})
-	
+	$('#navi_logout_btn').click(function(e){
+		e.preventDefault()
+		alert('로그아웃')
+		user.init()
+		user.logout()
+	})
+	$('#navi_withdrawal_btn').click(function(e){
+		e.preventDefault()
+		alert('회원탈퇴')
+		user.init()
+		user.remove()
+	})
+	$('#navi_connecting_btn').click(function(e){
+		e.preventDefault()
+		alert('접속중')
+	})
+	$('#navi_disconnection_btn').click(function(e){
+		e.preventDefault()
+		alert('접속해제')
+	})
 </script>

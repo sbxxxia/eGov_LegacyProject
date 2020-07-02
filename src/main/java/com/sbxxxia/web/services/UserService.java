@@ -22,5 +22,5 @@ public interface UserService {
 	public void findByAccessCodeIsNull();
 	public void findByGenderLike(String gender);
 	public void findByEmailOrderByNameAsc(String email);
-	public void register(UserDTO user);
+	public void register(UserDTO user); //회원가입
 }

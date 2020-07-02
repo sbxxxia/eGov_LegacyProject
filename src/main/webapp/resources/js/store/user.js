@@ -1,11 +1,13 @@
 var user = user || {}
 user = (function(){
 	let _, javascript, session
+	
 	let init = function(){
 		_ = sessionStorage.getItem('context'),
 		javascript = sessionStorage.getItem('javascript'),
 		session = sessionStorage.getItem('session')
 	}
+	
 	let join = function(payload){
 		$.ajax({
 			url: _+`/account/users`,
@@ -25,6 +27,7 @@ user = (function(){
 			}
 		})
 	}
+	
 	let login = function(payload){
 		$.ajax({
 			url : _+`/account/login`,
@@ -33,6 +36,7 @@ user = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
+				alert(JSON.stringify(res))
 				location.href = _ +`/`
 			},
 			error: function(err){
@@ -40,14 +44,17 @@ user = (function(){
 			}
 		})
 	}
+	
 	let logout = function(){
 		sessionStorage.removeItem('userid')
+		alert(sessionStorage.getItem('userid'))
 		sessionStorage.removeItem('context')
+		alert(sessionStorage.getItem('context'))
 		sessionStorage.removeItem('javascript')
-		sessionStorage.removeItem('css')
-		sessionStorage.removeItem('image')
+		sessionStorage.removeItem('session')
 		location.href = _+`/`
 	}
+	
 	let remove = function(){
 		$.ajax()
 		sessionStorage.removeItem('userid')
@@ -58,6 +65,7 @@ user = (function(){
 		location.href = _+`/`
 		
 	}
+	
 	return {init, join, login, logout, remove}
 })()
 

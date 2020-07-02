@@ -73,7 +73,7 @@
 <script>
 document.getElementById('login_btn').addEventListener('click',function(e){
 	e.preventDefault()
-	alert('click')  
+	alert('click')
 	user.init()
 	user.login({"userid": document.getElementById('userid').value,
 				"password": document.getElementById('password').value})

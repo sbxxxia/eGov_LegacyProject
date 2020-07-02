@@ -29,9 +29,9 @@
 	<select id="selectUseridByIdPassword" 
 			parameterType="com.sbxxxia.web.domains.UserDTO" 
 			resultType="com.sbxxxia.web.domains.UserDTO">
-		SELECT access_code
+		SELECT userid, password, name, birthday, gender, telephone, reg_date regDate, access_code accessCode
 		FROM users
-		WHERE userid = #{userid} AND password = #{password}
+		WHERE userid=#{userid} AND password=#{password}
 	</select>
 	
 	<select id="countUsers" resultType="int">
